@@ -1,0 +1,13 @@
+public static void makeGuesses(){
+    Random rand = new Random();
+    int randomGuess = rand.nextInt(50) + 1;
+    int totalGuesses = 1;
+    
+    while (randomGuess < 48){
+        System.out.println("guess = " + randomGuess);
+        randomGuess = rand.nextInt(50) + 1;
+        totalGuesses++;       
+    }
+    System.out.println("guess = " + randomGuess);
+    System.out.println("total guesses = " + totalGuesses);
+}
