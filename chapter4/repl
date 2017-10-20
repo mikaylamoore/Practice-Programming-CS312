@@ -1,0 +1,7 @@
+public static String repl(String word, int reps){
+    String repeatedWord="";
+    for (int i = 1; i <= reps; i ++){
+        repeatedWord = word + repeatedWord;
+    }
+    return repeatedWord;
+}
