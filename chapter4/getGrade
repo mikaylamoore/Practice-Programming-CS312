@@ -1,0 +1,20 @@
+public static double getGrade(int score){
+    double grade = 0;
+    if (score < 0 || score> 100){
+        throw new IllegalArgumentException("grade too low/high");
+    } else if (score < 60){
+        return 0.0;
+    } else if (score>= 60 && score<= 62){
+        grade = .7;
+        return grade;
+    } else if (score>=63 && score<=94){
+        grade = 0.8;
+        for (int i = 1; i<= score-63; i++){
+            grade= grade + 0.1;     
+        }
+        return grade;
+    } else {
+        grade = 4.0;
+        return grade;
+    }
+}
