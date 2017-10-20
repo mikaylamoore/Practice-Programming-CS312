@@ -1,0 +1,11 @@
+public static void printFactors(int n){
+    int div = 1;
+    
+    while ( div < n){
+        if (n % div == 0){
+            System.out.print(div + " and ");
+        }
+        div++;
+    }
+    System.out.print(n);                            
+}
