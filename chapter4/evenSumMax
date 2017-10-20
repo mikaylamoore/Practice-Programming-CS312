@@ -1,0 +1,19 @@
+public static void evenSum(){
+    Scanner in  = new Scanner(System.in);
+    System.out.print("how many integers? ");
+    int amount = in.nextInt();
+    int sum = 0;
+    int max = 0;
+    for (int i = 1; i <= amount; i++){
+        System.out.print("next integer? ");
+        int numb = in.nextInt();
+        if (numb%2 == 0){
+            sum = numb + sum;
+            if (numb>max){
+            max=numb;
+            }
+        }
+    }
+    System.out.println("even sum = " + sum);
+    System.out.println("even max = " + max);
+}
