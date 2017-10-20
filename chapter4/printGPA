@@ -1,0 +1,13 @@
+public static void printGPA(){
+    Scanner in = new Scanner(System.in);
+    System.out.print("Enter a student record: ");
+    String name = in.next();
+    int numbScores= in.nextInt();
+    double sumScores= 0;
+    for (int i = 1; i <= numbScores; i++){
+        int scores = in.nextInt();
+        sumScores = sumScores + scores;
+    }
+    double gpa= sumScores/numbScores;
+    System.out.println(name + "'s grade is " + gpa);
+}
