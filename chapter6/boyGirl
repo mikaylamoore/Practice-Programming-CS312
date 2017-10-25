@@ -1,0 +1,21 @@
+public static void boyGirl(Scanner input){
+    int count = 0;
+    int girlSum = 0;
+    int boySum = 0;
+    int girlCount = 0;
+    int boyCount = 0;
+    while (input.hasNext()){
+      String name = input.next();
+      count++;
+      int age = input.nextInt();
+      if (count % 2 == 0){
+          girlSum += age;
+          girlCount ++;   
+      } else {
+          boySum += age;
+          boyCount++;
+      }     
+    }
+    System.out.println( boyCount + " boys, " + girlCount + " girls");
+    System.out.println("Difference between boys' and girls' sums: " + Math.abs(boySum - girlSum));  
+}
