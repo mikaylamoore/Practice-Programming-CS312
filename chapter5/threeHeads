@@ -1,0 +1,18 @@
+public static void threeHeads(){
+    Random rand = new Random();
+    int side = rand.nextInt(2);
+    int count = 0;
+    
+    while (count!=3){
+        if (side == 0){
+            System.out.print("T ");
+            count = 0;
+        } else {
+            System.out.print("H ");
+            count++;
+        }
+        side = rand.nextInt(2);
+    }
+    System.out.println();
+    System.out.println("Three heads in a row!");
+}
