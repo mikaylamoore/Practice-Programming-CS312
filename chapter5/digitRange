@@ -1,0 +1,21 @@
+public static int digitRange(int n){
+    int min = 9;
+    int max = 0;
+    int range = 0;
+    n = Math.abs(n);
+    if (n == 0){
+        return 1;
+    }
+    while (n > 0){
+        int comp = n % 10;
+        if (comp > max){
+            max = comp;
+        }
+        if (comp < min){
+            min = comp;
+        }
+        n /=10;
+    }
+    range = max - min + 1;
+    return range;
+}
