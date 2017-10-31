@@ -1,0 +1,18 @@
+public static boolean allDigitsOdd(int n){
+    int odds = 0;
+    int count = 0;
+    n = Math.abs(n);
+    while (n > 0){
+        int comp = n % 10;
+        if (comp % 2 != 0){
+            odds++;
+        }
+        count ++;
+        n /=10;
+    }
+    if (odds==count && count > 0){
+        return true;
+    } else {
+        return false;
+    } 
+}
