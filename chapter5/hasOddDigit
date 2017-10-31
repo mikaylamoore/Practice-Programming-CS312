@@ -1,0 +1,16 @@
+public static boolean hasAnOddDigit(int n){
+    int odds= 0;
+    n = Math.abs(n);
+    while ( n > 0){
+        int comp = n % 10;
+        if (comp % 2 != 0){
+            odds++;
+        }
+        n/=10;     
+    }    
+    if ( odds > 0){
+        return true;
+    } else {
+        return false;
+    }     
+}
